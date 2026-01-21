@@ -12,18 +12,17 @@ Built using a **modular, event-driven architecture** for clean structure, good p
 ## Project Structure
 
 Assets/
-├── Scripts/
-│ ├── Core/ // SelectionManager, ObjectRegistry
-│ ├── Interaction/ // Object selection & keyboard delete
-│ ├── UI/ // Spawner panel & Property Inspector
-│ ├── Camera/ // Editor-style camera controls
-│ └── Visual/ // Selection highlighting
-│
-├── Prefabs/
-│ └── Spawnable/ // Cube, Sphere, Capsule, Cylinder
-│
-└── Scenes/
-└── EditorScene.unity
+
+- Scripts/
+  - Core/ (SelectionManager, ObjectRegistry)
+  - Interaction/ (Object selection & keyboard delete)
+  - UI/ (Spawner panel & Property Inspector)
+  - Camera/ (Editor-style camera controls)
+  - Visual/ (Selection highlighting)
+- Prefabs/
+  - Spawnable/ (Cube, Sphere, Capsule, Cylinder)
+- Scenes/
+  - EditorScene.unity
 
 ### Key Components
 
