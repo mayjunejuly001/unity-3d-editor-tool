@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using EditorTool.Core;
 
-public class DeleteSelectedObject : MonoBehaviour
+namespace EditorTool.Interaction
 {
-    // Start is called before the first frame update
-    void Start()
+    public sealed class DeleteSelectedObject : MonoBehaviour
     {
-        
-    }
+        private void Update()
+        {
+            if (!Input.GetKeyDown(KeyCode.Delete) &&
+                !Input.GetKeyDown(KeyCode.Backspace))
+                return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            GameObject selected = SelectionManager.Instance.CurrentSelection;
+            if (selected == null)
+                return;
+
+            ObjectRegistry.Instance.DeleteObject(selected);
+            SelectionManager.Instance.ClearSelection();
+        }
     }
 }
